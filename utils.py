@@ -1,6 +1,7 @@
 import datetime
 import requests
 
+
 def get_content(xml):
 	information = requests.get(xml)
 	encode = requests.utils.get_encoding_from_headers(information.headers)
