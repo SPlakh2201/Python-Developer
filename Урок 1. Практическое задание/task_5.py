@@ -20,19 +20,20 @@ class StackOfPlates():
 
 
 	def PutPlates(self):
-		limit = 3
-		count = 10
+		limit = int(input("Enter limit of stack: "))
+		count = int(input("Enter count of plates: "))
 		remainder = count % limit
 		count -= remainder
 		for i in range(count//limit):
-			self.stacks.append([" _ " * limit])
-		self.stacks.append([" _ " * remainder])
-		print(self.stacks)
+			self.stacks.append([" _ "] * limit)
+		if remainder != 0:
+			self.stacks.append([" _ "] * remainder)
+		print(f'Put plates: {self.stacks}')
 
 
 	def PopPlates(self):
-		self.stacks.pop()
-		print(self.stacks)
+		self.stacks[len(self.stacks)-1].pop()
+		print(f'Pop last plate: {self.stacks}')
 
 if __name__ == "__main__":
 	stack = StackOfPlates()
