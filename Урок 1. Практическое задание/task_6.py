@@ -33,9 +33,9 @@ class fifo:
 		choise = int(input('В какой список вы хотите добавить задачу?\nbase - 0, remake(Убедитесь что в списке Base присутсвуют задачи) - 1\nВаш выбор: '))
 		if choise == 0:
 			new_task = input('Введите новое задание: ')
-			self.base.append(new_task)
+			self.base.insert(0, new_task)
 		elif choise == 1 and len(self.base) > 0:
-			self.remake.append(self.base.pop(0))
+			self.remake.insert(0, self.base.pop(0))
 
 
 if __name__ == '__main__':
