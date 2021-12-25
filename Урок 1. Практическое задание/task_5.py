@@ -37,5 +37,5 @@ class StackOfPlates():
 
 if __name__ == "__main__":
 	stack = StackOfPlates()
-	stack.PutPlates()
-	stack.PopPlates()
+	stack.put_plates()
+	stack.pop_plates()
