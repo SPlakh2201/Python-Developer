@@ -22,6 +22,7 @@ def check_1(lst_obj):
     lst_to_set = set(lst_obj)  # O(len(lst_obj))
     return lst_to_set  # O(1)
 
+# Итоговая сложность O(len(lst_obj))
 
 ##############################################################################
 def check_2(lst_obj):
@@ -37,6 +38,7 @@ def check_2(lst_obj):
             return False                   # O(1)
     return True                            # O(1)
 
+# Итоговая сложность O(N)
 
 ##############################################################################
 def check_3(lst_obj):
@@ -58,7 +60,9 @@ for j in (50, 500, 1000, 5000, 10000):
     # Из 100000 чисел возьмем 'j' случайно выбранных
     # Всего 10 тыс. чисел
     lst = random.sample(range(-100000, 100000), j)
-
+    
+# Итоговая сложность O(N*log N)
+   
 print(check_1(lst))
 print(check_2(lst))
 print(check_3(lst))
