@@ -19,7 +19,7 @@ class StackOfPlates():
 		self.stacks = []
 
 
-	def PutPlates(self):
+	def put_plates(self):
 		limit = int(input("Enter limit of stack: "))
 		count = int(input("Enter count of plates: "))
 		remainder = count % limit
@@ -31,7 +31,7 @@ class StackOfPlates():
 		print(f'Put plates: {self.stacks}')
 
 
-	def PopPlates(self):
+	def pop_plates(self):
 		self.stacks[len(self.stacks)-1].pop()
 		print(f'Pop last plate: {self.stacks}')
 
