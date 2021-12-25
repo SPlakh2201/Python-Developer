@@ -11,7 +11,7 @@
 Примечание: ПРОШУ ВАС ВНИМАТЕЛЬНО ЧИТАТЬ ЗАДАНИЕ!
 """
 
-class fifo:
+class Tasks:
 	def __init__(self):
 		self.base = []
 		self.remake = []
@@ -39,7 +39,7 @@ class fifo:
 
 
 if __name__ == '__main__':
-	tasks_list = fifo()
+	tasks_list = Tasks()
 	while True:
 		choise = int(input('1. Добавить в список\n2. Показать списки\nВаш выбор: '))
 		if choise == 1:
