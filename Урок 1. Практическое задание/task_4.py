@@ -1,15 +1,15 @@
 # Решение 1.
 
-def authentication(dict1): # Оценка алгоритма: O(13)
+def authentication(dict1): # Оценка алгоритма: O(N)
 	login = input("\nEnter your username: ") # O(1)
-	if login in dict1.keys(): # По информации в интернете: O(1) + O(1) 
+	if login in dict1.keys(): # O(N)
 		password = input("Enter your password: ") # O(1)
 		if password == dict1[login]: # O(1)
 			return 'Succes' # O(1)
 		else: # подозреваю, что O(1)
 			return 'Wrong password' # O(1)
 	else: # O(1)
-		registration(login, dict1) # O(3)
+		registration(login, dict1) # O(1)
 		return 'Welcome' # O(1)
 
 
@@ -32,7 +32,7 @@ def authentication2(dict1): # Оценка сложности: O(N)
 				else: # O(1)
 					return 'Wrong password' #O(1)
 	else: # O(1)
-		registration(login, dict1) #O(3)
+		registration(login, dict1) #O(1)
 		return 'Welcome' # O(1)
 
 
